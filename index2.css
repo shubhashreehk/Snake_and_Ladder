@@ -1,0 +1,219 @@
+@font-face{
+    src: url(font/Saint\ Peter.ttf);
+    font-family: Saint Peter;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Saint Peter;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+body{
+    
+    background: url(img/landscape-1638357243534-8275.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.Header{
+    position: absolute;
+    margin: 5px 0;
+    color: Tomato;
+    font-size: 2rem;
+    width: 100%;
+}
+.owner_name{
+    color: rgb(210,56,108);
+    /* text-decoration: underline; */
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    
+}
+#game_box{
+    justify-content: center;
+    align-items: center;
+    /* height: 600px;
+    width: 600px; */
+}
+.game{
+    position: relative;
+    margin: 80px auto 0 auto;
+    height: 600px;
+    width: 600px;
+    background: url(img/ludo_board.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    box-shadow: -3px 3px 10px black;
+    
+    grid-template-columns:repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    row-gap: 3px;
+    column-gap: 3px;
+    
+    border-radius: 15px;
+    overflow: hidden;
+}
+.box1{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extra_work{
+    /* border: solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+}
+.score{
+    width: 332px;
+    /* border: solid red ; */
+}
+.User_name{
+    font-size: 2.5rem;
+    display: inline-block;
+    color: rgb(210,56,108);
+    
+}
+.User_name::after{
+    text-transform: capitalize;
+    content: '';
+    border-radius: 10px;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 10px;
+    background: #7FFFD4;
+    display: block;
+}
+#Final_msg{
+    /* padding: 0 15%; */
+    font-size: 1.2rem;
+    height: 170px;
+}
+.dice_detail{
+    width: 332px;
+    /* border: solid red; */
+}
+
+.dice_head{
+    font-size: large;
+    font-style: italic;
+}
+#dice_display {
+    height: 70px;
+    width: 70px;
+    margin: 15px;
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+    color:white;
+    background-color: rgb(228, 52, 52);
+    background-image: url(img/dice_face/Dice.png);
+    background-size: cover;
+    border-radius: 15px;
+}
+.coin{
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 155, 119);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+
+    border: 3px solid rgb(0, 155, 119);
+    overflow: hidden;
+    color: black;
+    font-size: x-large;
+    text-transform: capitalize;
+}
+@media(max-width: 900px){
+
+    .Header{
+        font-size: 1.3rem;
+    }
+    .container{
+        min-height: 699px;
+        position: relative;
+        height: 100vh;
+        max-height: 700px;
+        position: relative;
+        display: flex;
+        /* border: solid; */
+        align-items: center;
+        justify-content: center;
+    }
+    .extra_work{
+        /* border: solid yellow; */
+        height: 100vh;
+        max-height: 700px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .score{
+        position:absolute;
+        top: 70px;
+        /* border: solid red; */
+    }
+    .User_name{
+        
+        font-size: 1.3rem;
+        font-weight: normal;
+    }
+    .User_name::after{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #Final_msg{
+        font-size: 0.9rem;
+        font-weight: lighter;
+        letter-spacing: 0;
+        
+    }
+    .dice_detail{
+        position: absolute;
+        bottom: 0;
+        width: fit-content;
+        margin-bottom: 15px;
+        /* border: solid red; */
+        display: flex;
+        align-items: center;
+        /* justify-content: space-around; */
+    }
+
+    .for_pc_only{
+        display: none;
+    }
+    #game_box{
+        margin-top: 85px;
+    }
+    .game{
+        
+        width: 95vw;
+        height:95vmin ;
+        max-height: 350px;
+        max-width: 350px;
+        margin: 0;
+    }
+    .coin{
+        font-size: small;
+        width: 70%;
+        height: 70%;
+    }
+}
